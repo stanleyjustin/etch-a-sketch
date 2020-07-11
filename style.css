@@ -1,0 +1,26 @@
+/* ---Container--- */
+#container {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    height: 600px;
+    width: 600px;
+    border: 50px rgb(145, 0, 0) solid;
+    border-radius: 25px;
+    /* formatting of grid */
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+
+#container.child {
+    display: inline-block;
+    text-align: start;
+}
+/* ---BUTTONS--- */
+.reset-button {
+    display: grid;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px
+}
