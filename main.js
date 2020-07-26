@@ -1,6 +1,11 @@
 const container = document.querySelector("#container");
 //delare beginning rows and cols
-const grid = 16;
+let grid = 16;
+
+//create columns
+function createCols() {
+    document.getElementById("container").style.gridTemplateColumns = `repeat(${grid}, auto)`;
+}
 
 //create div
 function createCell() {
@@ -23,9 +28,6 @@ function createGrid() {
     }
 }
 
-function resetGrid() {
-    createGrid();
-}
 
 
 
