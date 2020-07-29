@@ -2,12 +2,7 @@ const container = document.querySelector("#container");
 //delare beginning rows and cols
 let grid = 16;
 
-//create columns
-function createCols() {
-    document.getElementById("container").style.gridTemplateColumns = `repeat(${grid}, auto)`;
-}
-
-//create div
+//create cells in the form of divs
 function createCell() {
     let divCell = document.createElement("div");
     divCell.id = "divBox";
@@ -21,12 +16,34 @@ function createCell() {
     });
 }
 
-//loop that creates a grid of 'r' iterations
+//create columns and loop createCell
 function createGrid() {
+    document.getElementById("container").style.gridTemplateColumns = `repeat(${grid}, auto)`;
     for (r = 0; r < (grid*grid); r++) {
         createCell();
     }
 }
+
+//creates new grid from user prompt
+function newGrid() {
+    let userGrid = prompt("Enter your dimensions as a single number");
+    document.getElementById("container").style.gridTemplateColumns = `repeat(${userGrid}, auto)`;
+    for (i = 0; i < (userGrid*userGrid); i++) {
+        createCell(userGrid);
+    }
+}
+
+//clear existing grid then run function newGrid
+function clearGrid() {
+    const container = document.querySelector("#container");
+    const containerChildren = document.querySelectorAll("#divBox");
+    containerChildren.forEach(child => {
+        container.removeChild(child);
+    });
+    newGrid();
+}
+
+
 
 
 
