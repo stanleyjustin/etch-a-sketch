@@ -16,9 +16,17 @@
     text-align: start;
 }
 /* ---BUTTONS--- */
-.reset-button {
+button {
     display: grid;
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px
+}
+
+.reset-button {
+    
+}
+
+.rainbow-button {
+   
 }
