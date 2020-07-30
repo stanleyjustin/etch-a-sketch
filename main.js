@@ -15,7 +15,7 @@ function createCell() {
     let divCell = document.createElement("div");
     divCell.id = "divBox";
     divCell.style.background = "white";
-    divCell.style.border = "1px dotted grey";
+    divCell.style.border = "none";
     document.getElementById("container").appendChild(divCell);
     //event listener to change div color on mouseover
     divCell.addEventListener("mouseover", function shadeSolid () {
@@ -36,10 +36,14 @@ function clearGrid() {
 
 //creates new grid from user prompt
 function newGrid() {
-    let userGrid = prompt("Enter your dimensions as a single number");
+    let userGrid = prompt("Enter new density between 1 and 100");
+    if (userGrid != null && userGrid > 0 && userGrid < 100) {
     document.getElementById("container").style.gridTemplateColumns = `repeat(${userGrid}, auto)`;
     for (i = 0; i < (userGrid*userGrid); i++) {
         createCell(userGrid);
+    }
+    } else {
+        alert("Error: please enter a valid number between 1 and 100");
     }
 }
 
@@ -48,7 +52,7 @@ function rainbowCell() {
     let divCell = document.createElement("div");
     divCell.id = "divBox";
     divCell.style.background = "white";
-    divCell.style.border = "1px dotted grey";
+    divCell.style.border = "none";
     document.getElementById("container").appendChild(divCell);
     //event listener to change div color on mouseover
     divCell.addEventListener("mouseover", function shadeRainbow () {
@@ -57,8 +61,6 @@ function rainbowCell() {
         divCell.style.border = "#" + randomColor;
     });
 }
-
-//clear existing grid then run function newGrid
 function clearRainbow() {
     const container = document.querySelector("#container");
     const containerChildren = document.querySelectorAll("#divBox");
@@ -67,18 +69,17 @@ function clearRainbow() {
     });
     newRainbow();
 }
-
-//creates new grid from user prompt
 function newRainbow() {
-    let userGrid = prompt("Enter your dimensions as a single number");
+    let userGrid = prompt("Enter new density between 1 and 100");
+    if (userGrid != null && userGrid > 0 && userGrid < 100) {
     document.getElementById("container").style.gridTemplateColumns = `repeat(${userGrid}, auto)`;
     for (i = 0; i < (userGrid*userGrid); i++) {
         rainbowCell(userGrid);
     }
+    } else {
+     alert("Error: please enter a valid number between 1 and 100");   
+    }
 }
-
-
-
 
 
 
