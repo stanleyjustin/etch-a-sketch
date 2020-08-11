@@ -36,7 +36,7 @@ function clearGrid() {
 
 //creates new grid from user prompt
 function newGrid() {
-    let userGrid = prompt("Enter new density between 1 and 100");
+    let userGrid = prompt("Enter new grid density between 1 and 100");
     if (userGrid != null && userGrid > 0 && userGrid < 100) {
     document.getElementById("container").style.gridTemplateColumns = `repeat(${userGrid}, auto)`;
     for (i = 0; i < (userGrid*userGrid); i++) {
@@ -70,7 +70,7 @@ function clearRainbow() {
     newRainbow();
 }
 function newRainbow() {
-    let userGrid = prompt("Enter new density between 1 and 100");
+    let userGrid = prompt("Enter new grid density between 1 and 100");
     if (userGrid != null && userGrid > 0 && userGrid < 100) {
     document.getElementById("container").style.gridTemplateColumns = `repeat(${userGrid}, auto)`;
     for (i = 0; i < (userGrid*userGrid); i++) {

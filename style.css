@@ -15,16 +15,26 @@
     display: inline-block;
     text-align: start;
 }
+.button-container {
+    text-align: center;
+}
+
+.title-container {
+    text-align: center;
+}
 /* ---BUTTONS--- */
 button {
-    display: grid;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 50px
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 25px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    background-color: white;
 }
 
 .reset-button {
-    
+
 }
 
 .rainbow-button {

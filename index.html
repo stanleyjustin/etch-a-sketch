@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Etched: a Sketchpad</title>
+  <title>Sketchpad</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="main.js" type="text/javascript"></script>
 </head>
 
 <body>
-  <div>
+  <div class="title-container"> 
+    <h1>Sketchpad</h1>    
+  </div>
+  <div class="button-container">
     <button class="reset-button" id="reset-button" onclick="clearGrid()">RESET</button>
     <button class="rainbow-button" id="rainbow-button" onclick="clearRainbow()">RAINBOW</button>
+  </div>
   <div class="container" id="container"></div>
 
 </body>
